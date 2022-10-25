@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+ <item android:id="@+id/actionhome"
+   android:title="@string/actionhome"
+    android:icon="@drawable/home"
+
+    />
+ <item android:id="@+id/actiontransaction"
+        android:title="transaction"
+        android:icon="@drawable/giaodich"/>
+ <item android:id="@+id/actionnews"
+        android:title="@string/actionnews"
+        android:icon="@drawable/thitruong"/>
+ <item android:id="@+id/actiohistory"
+        android:title="@string/actiohistory"
+        android:icon="@drawable/lichsu"/>
+ <item android:id="@+id/actionprofile"
+        android:title="@string/actionprofile"
+        android:icon="@drawable/hoso"/>
+</menu>

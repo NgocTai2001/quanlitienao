@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".inforCoin">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="263dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewlogoinfor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="155dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="156dp"
+            android:layout_marginRight="156dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="175dp"
+            android:gravity="center"
+            android:textSize="30dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarinforcoin"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="173dp"
+            android:layout_marginLeft="173dp"
+            android:layout_marginTop="215dp"
+            android:layout_marginEnd="190dp"
+            android:layout_marginRight="190dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">/
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="Price"
+                    android:background="@drawable/custominforcoin"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/Textprice"
+                    android:background="@drawable/custominforcoiright"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="70dp"
+                    android:layout_span="4"
+
+                    android:gravity="center"
+
+                    android:textSize="20dp" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/custominforcoin"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="70dp"
+
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="1 Hour"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/Text1hour"
+                    android:background="@drawable/custominforcoiright"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="70dp"
+                    android:layout_span="4"
+                    android:gravity="center"
+                    android:textSize="20dp" />
+
+
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/custominforcoin"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="24 Hour"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/Text24hour"
+                    android:background="@drawable/custominforcoiright"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="70dp"
+                    android:layout_span="4"
+                    android:gravity="center"
+                    android:textSize="20dp" />
+
+
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/custominforcoin"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="7 Day"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/Text7day"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_span="4"
+                    android:background="@drawable/custominforcoiright"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">/
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custominforcoin"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"
+                    android:text="Purchase Order"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <TextView
+
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_span="4"
+                    android:background="#0E4A0D"
+                    android:gravity="left"
+
+                    android:text="Amount"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_marginRight="5dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_span="4"
+                    android:background="@drawable/custominforcoiright"
+                    android:gravity="left"
+
+                    android:text="Lesser"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+
+                <TextView
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/custominforcoin"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Sell oder"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_span="4"
+                    android:background="#0E4A0D"
+                    android:gravity="left"
+                    android:text="Amount"
+
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_span="4"
+                    android:background="@drawable/custominforcoiright"
+                    android:gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:text="Greater"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </TableRow>
+
+
+        </TableLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

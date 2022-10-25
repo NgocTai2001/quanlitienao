@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#E7E7E7"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttondangxuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="376dp"
+        android:text="Đăng Xuất "
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.454" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="406dp"
+        android:layout_height="54dp"
+        app:itemBackground="@color/teal_700"
+        app:itemIconTint="@android:color/black"
+        app:itemTextColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_buttom" />
+
+    <EditText
+        android:id="@+id/editTextdata"
+        android:layout_width="321dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="124dp"
+        android:ems="10"
+        android:hint="nhập dữ liệu "
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonpushdata"
+        android:layout_width="308dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/cuttombutton"
+        android:text="Gửi Dữ Liệu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.359"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextdata" />
+    <Button
+        android:id="@+id/buttongetdata"
+        android:layout_width="308dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="176dp"
+        android:background="@drawable/cuttombutton"
+        android:text="Lấy Dữ Liệu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextdata" />
+    <TextView
+        android:id="@+id/Textviewdata"
+        android:layout_width="331dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="288dp"
+        android:ems="10"
+        android:hint="giá trị được đọc từ firebase "
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

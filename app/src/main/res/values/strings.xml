@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Crypto</string>
+    <string name="actionhome">Home</string>
+    <string name="actiohistory">history</string>
+    <string name="actiontransaction">transaction</string>
+    <string name="actionprofile">profile</string>
+    <string name="actionnews">news</string>
+    <string name="actionseach">Seach</string>
+</resources>
