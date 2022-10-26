@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -28,11 +30,14 @@ public class inforCoin extends AppCompatActivity {
     private TextView TexPrice, Text1hour, Text24Hour, Text7Day, Texname;
     private ImageView  logoinfor ;
     private ProgressBar progressBar;
+    private Button btnSell, bntBuy;
     private static DecimalFormat df2 = new DecimalFormat("#.##");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infor_coin);
+        btnSell = findViewById(R.id.buttonsell);
+        bntBuy = findViewById( R.id.buttonBuy);
         TexPrice = findViewById( R.id.Textprice);
         Texname = findViewById( R.id.textViewname);
         Text1hour =findViewById(R.id.Text1hour);
@@ -46,7 +51,19 @@ public class inforCoin extends AppCompatActivity {
         Texname.setText(name);
         Picasso.get().load(logo).into(logoinfor );
         getCurrencyData(sringid );
+         btnSell.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 Toast.makeText(inforCoin.this, "Bán thành công ", Toast.LENGTH_SHORT).show();
 
+             }
+         });
+        bntBuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(inforCoin.this, "Mua thành công ", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     private void getCurrencyData(String idfind) {
         progressBar.setVisibility(View.VISIBLE);

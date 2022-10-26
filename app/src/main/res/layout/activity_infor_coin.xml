@@ -8,8 +8,8 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="263dp"
+        android:layout_width="407dp"
+        android:layout_height="211dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,15 +23,16 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="155dp"
-            android:layout_marginLeft="155dp"
-            android:layout_marginTop="65dp"
-            android:layout_marginEnd="156dp"
-            android:layout_marginRight="156dp"
+            android:layout_marginStart="147dp"
+            android:layout_marginLeft="147dp"
+            android:layout_marginTop="51dp"
+            android:layout_marginEnd="164dp"
+            android:layout_marginRight="164dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
+
             android:id="@+id/textViewname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,6 +68,7 @@
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -193,52 +195,54 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="220dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">/
 
         <TableLayout
+
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="match_parent"
             android:stretchColumns="*">
-
             <TableRow>
 
                 <TextView
+                    android:layout_height="35dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_height="35dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/custominforcoin"
-                    android:gravity="left"
+                    android:background="@drawable/cutomoderandsell"
+                    android:gravity="center"
+                    android:hint="Purchase Order"
                     android:paddingLeft="10dp"
-                    android:text="Purchase Order"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="#000000"
                     android:textSize="20dp" />
 
-                <TextView
+                <EditText
 
                     android:layout_height="35dp"
                     android:layout_marginTop="10dp"
                     android:layout_span="4"
-                    android:background="#0E4A0D"
-                    android:gravity="left"
-
-                    android:text="Amount"
+                    android:background="@drawable/vien"
+                    android:gravity="center"
+                    android:hint="Amount"
                     android:textColor="@color/black"
+                    android:textColorHint="#000000"
                     android:textSize="20dp" />
 
-                <TextView
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="5dp"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="10dp"
                     android:layout_span="4"
-                    android:background="@drawable/custominforcoiright"
-                    android:gravity="left"
-
-                    android:text="Lesser"
+                    android:background="@drawable/vienright"
+                    android:gravity="center"
+                    android:hint="Lesser"
                     android:textColor="@color/black"
+                    android:textColorHint="#000000"
                     android:textSize="20dp" />
 
             </TableRow>
@@ -248,39 +252,75 @@
 
                 <TextView
                     android:layout_height="35dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/custominforcoin"
-                    android:gravity="left"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/cutomoderandsell"
+                    android:gravity="center"
+                    android:hint="Sell oder"
                     android:paddingLeft="10dp"
-                    android:text="Sell oder"
-                    android:textColor="@color/white"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:layout_height="35dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_span="4"
-                    android:background="#0E4A0D"
-                    android:gravity="left"
-                    android:text="Amount"
-
                     android:textColor="@color/black"
+                    android:textColorHint="#000000"
                     android:textSize="20dp" />
 
-                <TextView
+                <EditText
+
                     android:layout_height="35dp"
                     android:layout_marginTop="5dp"
                     android:layout_span="4"
-                    android:background="@drawable/custominforcoiright"
-                    android:gravity="left"
+                    android:background="@drawable/vien"
+                    android:gravity="center"
+                    android:hint="Amount"
+                    android:textColor="@color/black"
+                    android:textColorHint="#000000"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
-                    android:text="Greater"
+                    android:layout_span="4"
+                    android:background="@drawable/vienright"
+                    android:gravity="center"
+                    android:hint="Greater"
                     android:textColor="@color/black"
+                    android:textColorHint="#000000"
                     android:textSize="20dp" />
+
             </TableRow>
 
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:stretchColumns="*">
 
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/buttonsell"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/custombuyanhsell"
+                        android:text="Sell">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/buttonBuy"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/custombuyanhsell"
+                        android:text="Buy">
+
+                    </Button>
+                </TableRow>
+
+
+            </TableLayout>
         </TableLayout>
 
     </RelativeLayout>

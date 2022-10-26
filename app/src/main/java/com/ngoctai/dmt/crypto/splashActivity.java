@@ -23,7 +23,7 @@ public class splashActivity extends AppCompatActivity {
             }
 
 
-        },2000);
+        },1000);
     }
     private void nextActivity() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
