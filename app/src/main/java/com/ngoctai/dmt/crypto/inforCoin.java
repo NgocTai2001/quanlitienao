@@ -40,11 +40,13 @@ public class inforCoin extends AppCompatActivity {
         Text7Day = findViewById( R.id.Text7day);
         progressBar = findViewById( R.id.progressBarinforcoin);
         logoinfor = findViewById(R.id.imageViewlogoinfor);
-        Bundle bundle =getIntent().getExtras();
-        ModelCrypto modelCrypto = (ModelCrypto) bundle.get("object_infor") ;
-        Texname.setText(modelCrypto.getName());
-        Picasso.get().load(modelCrypto.getLogo()).into(logoinfor );
-        getCurrencyData(modelCrypto.getId() );
+        String sringid = getIntent().getStringExtra("sringid");
+        String name = getIntent().getStringExtra("stringname");
+        String logo= getIntent().getStringExtra("stringlogo");
+        Texname.setText(name);
+        Picasso.get().load(logo).into(logoinfor );
+        getCurrencyData(sringid );
+
     }
     private void getCurrencyData(String idfind) {
         progressBar.setVisibility(View.VISIBLE);
@@ -52,45 +54,30 @@ public class inforCoin extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-
             @Override
             public void onResponse(JSONObject response) {
 
                 try {
-
-
-
                         JSONObject dataOjectdata = response.getJSONObject("data");
-
                         Calendar c = Calendar.getInstance();
                         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy ");
                         String strDate = sdf.format(c.getTime());
                         JSONObject dataObj = dataOjectdata.getJSONObject(idfind);
                         ModelCrypto modelCryptod= new ModelCrypto();
                         String id = dataObj.getString("id");
-                            modelCryptod.setSymbol(""+strDate);
-                            JSONObject quote = dataObj.getJSONObject("quote");
-                            JSONObject USD = quote.getJSONObject("USD");
-                            TexPrice.setText("$ " + df2.format(USD.getDouble("price")));
-
-                            Text1hour.setText( df2.format(USD.getDouble("percent_change_1h"))+"%");
-                            Text24Hour.setText( df2.format(USD.getDouble("percent_change_24h"))+"%");
-                            Text7Day.setText( df2.format(USD.getDouble("percent_change_7d"))+"%");
-
-
-
-
-
-
-
-
+                        modelCryptod.setSymbol(""+strDate);
+                        JSONObject quote = dataObj.getJSONObject("quote");
+                        JSONObject USD = quote.getJSONObject("USD");
+                        TexPrice.setText("$ " + df2.format(USD.getDouble("price")));
+                        Text1hour.setText( df2.format(USD.getDouble("percent_change_1h"))+"%");
+                        Text24Hour.setText( df2.format(USD.getDouble("percent_change_24h"))+"%");
+                        Text7Day.setText( df2.format(USD.getDouble("percent_change_7d"))+"%");
                     progressBar.setVisibility(View.GONE);
                 }
                 catch (JSONException e) {
                     e.printStackTrace();
 
                 }
-
             }
         }, new Response.ErrorListener() {
             @Override

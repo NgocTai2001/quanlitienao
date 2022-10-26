@@ -95,8 +95,6 @@ public class MainActivity extends AppCompatActivity {
                 //Toast.makeText(MainActivity.this,"Users/"+UID+"/id" , Toast.LENGTH_SHORT).show();
                 DatabaseReference myref = database.getReference("Users/"+UID+"/id");
                 myref.setValue(edtdata.getText().toString().trim());
-
-
             }
         });
         btngetdata.setOnClickListener(new View.OnClickListener() {
@@ -115,8 +113,6 @@ public class MainActivity extends AppCompatActivity {
         btnpushdata  =findViewById(R.id.buttonpushdata);
         tvdata = findViewById(R.id.Textviewdata);
     }
-
-
     // Write a message to the database
 private  void writeData ()
 {
@@ -142,9 +138,7 @@ private void ReadData ()
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
                 tvdata.setText(value);
-
             }
-
             @Override
             public void onCancelled(DatabaseError error) {
                 // Failed to read value

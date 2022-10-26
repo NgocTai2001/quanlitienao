@@ -68,7 +68,7 @@ public class CryptoActivity extends AppCompatActivity {
         adapterCrypto = new AdapterCrypto(modelCryptos , new IClickitemdata() {
             @Override
             public void onclickitem(ModelCrypto modelCrypto) {
-                onclickgotodetail(modelCrypto);
+                onclickgotodetail(modelCrypto.getId(), modelCrypto.getName(), modelCrypto.getLogo());
             }
         });
         currenciesRV.setAdapter(adapterCrypto);
@@ -195,12 +195,11 @@ public class CryptoActivity extends AppCompatActivity {
         requestQueue.add(jsonObjectRequest);
     }
 
-    private void onclickgotodetail(ModelCrypto modelCrypto) {
+    private void onclickgotodetail( String id , String name , String logo) {
         Intent intent = new Intent(this,inforCoin.class);
-        Bundle bundle = new Bundle();
-
-        bundle.putSerializable("object_infor", (Serializable) modelCrypto);
-        intent.putExtras(bundle);
+        intent.putExtra("sringid" ,id );
+        intent.putExtra("stringname", name);
+        intent.putExtra("stringlogo", logo);
        startActivity(intent);
 
     }
